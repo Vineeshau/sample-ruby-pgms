@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Trip Calculator</title>
+</head>
+<body 
+style="
+padding: 200px 0px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;">
+<div style="border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    border-radius: 5px;">
+    <h1 style="color: blue;">Trip Calculator</h1>
+	<div>
+	<label>Total Amount :</label>
+	<input type="text" id="total_amount" name="t_amount" placeholder="Enter the total amount...">
+</div>
+<br>
+<div>
+	<label>Total Persons :</label>
+	<input type="text" id="total_person" name="t_person" placeholder="Total number of person...">
+</div>
+<br>
+<button style="border: none; background: blue; color: white; height: 50px; width: 200px; border-radius: 5px; cursor: pointer;" onclick="splitCalculate()">Calculate</button>
+<br>
+<h1 id="split1" style="color: red;"></h1>
+</div>
+</body>
+<script type="text/javascript">
+	function splitCalculate() {
+	let amount = document.getElementById('total_amount').value;
+	let persons = document.getElementById('total_person').value;
+	let split = amount/persons;
+	document.getElementById('split1').innerHTML="Split Amount is :" + split;
+}
+</script>
+</html>

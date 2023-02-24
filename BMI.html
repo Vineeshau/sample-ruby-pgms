@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BMI</title>
+</head>
+<body 
+style="
+padding: 200px 0px;
+display: flex;
+align-items: center;
+justify-content: center;
+">
+<div style="border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    border-radius: 5px;">
+<h1 style="color: red;">BMI Calculator</h1>
+	<div>
+	<label>Height :</label>
+	<input type="text" id="height" name="Height" placeholder="Enter the height...">
+</div>
+<br>
+<div>
+	<label>weight :</label>
+	<input type="text" id="weight" name="Weight" placeholder="Enter the weight...">
+</div>
+<br>
+<button style="border: none; background: black; color: white; height: 40px; width: 250px; border-radius: 5px; cursor: pointer;" onclick="calculateBMI()">Calculate</button>
+<br>
+<div>
+	<h1 id="bmi" style="color: blue;"></h1>
+	<h2 id="status" style="color: blue;"></h2>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	function calculateBMI() {
+	let heights = document.getElementById('height').value;
+	let weights = document.getElementById('weight').value;
+	let sum = weights/heights/heights*10000;
+	document.getElementById('bmi').innerHTML= "BMI IS :" + sum;
+	if(sum < 18.5){
+		document.getElementById('status').innerHTML= "Underweight";
+	}else if(sum >= 18.5 && sum <= 24.9){
+		document.getElementById('status').innerHTML= "Normal Weight";
+	}else if(sum >= 25 && sum <= 29.9){
+		document.getElementById('status').innerHTML= "Over Weight";
+	}else{
+		document.getElementById('status').innerHTML= "Obesity";
+	}
+}
+</script>
+</html>
