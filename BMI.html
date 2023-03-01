@@ -52,6 +52,7 @@ justify-content: center;
 function change_weight() {
 	if(document.getElementById('weight').value < 0){
 			document.getElementById('error2').innerHTML="Not Possible";
+			document.getElementById('btn').disabled = true;
 		}else{
 			document.getElementById('btn').disabled = false;
 		}

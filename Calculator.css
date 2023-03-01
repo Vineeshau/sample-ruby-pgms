@@ -1,0 +1,25 @@
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 300px 0px;
+}
+.grid-container{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	width: 500px;
+	height: 500px;
+	border-radius: 10px;
+}
+.text-box{
+	grid-column-start: 1;
+	grid-column-end: 5;
+	font-size: 28px;
+}
+.items{
+	font-size: 28px;
+}
+.item1{
+	font-size: 28px;
+	grid-row: span 2;
+}
